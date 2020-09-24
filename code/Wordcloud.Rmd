@@ -24,6 +24,9 @@ library(RColorBrewer)
 # download some data to play with 
 df <- readr::read_tsv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-25/chopped.tsv')
 
+# check the data
+head(df)
+
 ```
 
 ```{r create word frequency table}
@@ -66,6 +69,7 @@ wordcloud(words = d$word, freq = d$freq, min.freq = 1,
           max.words=100, random.order=FALSE, rot.per=0.35, 
           colors=brewer.pal(8, "Dark2"))
 
+# Confirm and check the size of the figure that you wish to publish
 ```
 
 ```{r create barplot}
